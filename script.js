@@ -8,6 +8,32 @@ const loadTrendingProducts = async () => {
 }
 
 
+
+const showDetails = async (id) => {
+    const res= await fetch(`https://fakestoreapi.com/products/${id}`)
+    const product = await res.json()
+
+document.getElementById("fullTitle").innerText = product.title
+    
+    document.getElementById("fullDescription").innerText = product.description
+    document.getElementById("price").innerText = product.price
+    document.getElementById("rating").innerText = product.rating.rate
+    document.getElementById("addToCart").innerText = "Add to Cart"
+
+    document.getElementById("my_modal_5").showModal()
+
+
+
+}
+
+
+
+
+
+
+
+
+
 const loadCategories = async () => {
     const res = await fetch("https://fakestoreapi.com/products/categories")
     const data = await res.json()
@@ -33,8 +59,6 @@ const loadCategories = async () => {
 }
 
 
-
-
 const showHome = () => {
     document.getElementById("banner-section").classList.remove("hidden")
     document.getElementById("trending-section").classList.remove("hidden")
@@ -50,8 +74,6 @@ const showProducts = () => {
 
 
 }
-
-
 
 
 const loadAllProducts = async () => {
@@ -179,7 +201,7 @@ const displayTrending = (products) => {
     <p class="font-bold"><i class="fa-solid fa-dollar-sign"></i> ${product.price}</p>
     
     <div class=" card-actions justify-between">
-      <button class="btn btn-md btn-outline">
+      <button class="btn btn-md btn-outline" onclick="showDetails(${product.id})">
            <i class="fa-regular fa-eye"></i>   Details
             </button>
       <button class="btn btn-md btn-primary">
