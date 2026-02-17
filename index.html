@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restart-assignment-6</title>
+
+  <!-- cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+
+  <!-- tailwind+daisyui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+  <header>
+    <div class="navbar bg-base-100 shadow-sm w-10/12/12 mx-auto ">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </div>
+          <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100  rounded-box z-1 mt-3 p-2 shadow">
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Products</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl font-bold text-primary">SwiftCart</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class=" menu menu-horizontal px-1">
+          <li class="hover:text-cyan-600 ">
+            <a href="#" onclick="showHome()">Home</a>
+          </li>
+          <li class="hover:text-cyan-600 ">
+
+
+            <a href="#" onclick="showProducts()">Products</a>
+          </li>
+          <li class="hover:text-cyan-600 ">
+            <a href="">About</a>
+          </li>
+          <li class="hover:text-cyan-600 ">
+            <a href="">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+    </div>
+  </header>
+
+  <section id="banner-section">
+
+    <div class="hero min-h-96" style="background-image: url(Assets/banner-image.png);">
+
+
+      <div class="hero-overlay bg-gradient-to-r from-black/60 via-black/50"></div>
+
+      <div class="hero-content text-neutral-content w-full">
+        <div class=" text-left">
+
+          <h1 class="mb-6 text-5xl md:text-6xl font-bold leading-tight">
+            Best Collection For You
+          </h1>
+
+          <p class="mb-6 text-lg text-gray-200">
+            Discover the latest trends in fashion, electronics, and more.
+            Shop with <br>
+            confidence and style at SwiftCart.
+          </p>
+
+          <button class="btn bg-indigo-600 border-none text-white px-6">
+            Shop Now
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+  <section id="features-section" class="w-10/12 mx-auto text-center my-20">
+    <div>
+      <h2 class=" text-4xl md:text-4xl font-bold leading-tight">Why Choose Us</h2>
+      <p class=" text-slate-400"> We provide the best shopping experience with top-notch services.</p>
+    </div>
+
+    <div class="flex gap-5 my-20 grid-cols">
+
+
+      <div class="card card-border bg-base-100 w-96">
+        <div class=" text-left">
+          <div class="text-2xl p-1 text-center w-10 bg-slate-100 rounded  ">
+            <i class="fa-regular text-sky-600 fa-truck"></i>
+          </div>
+          <h2 class="font-semibold text-xl my-2">Fast Delivery</h2>
+          <p>Get your orders delivered to your doorstep quickly and efficiently</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-100 w-96">
+        <div class=" text-left">
+          <div class="text-2xl p-1 text-center w-10 bg-slate-100 rounded  ">
+            <i class="text-sky-600 fa-regular fa-headphones"></i>
+          </div>
+          <h2 class="font-semibold text-xl my-2">24/7 Support</h2>
+          <p>Our support team is available around the clock to assist you.</p>
+        </div>
+      </div>
+      <div class="card card-border bg-base-100 w-96">
+        <div class=" text-left">
+          <div class="text-2xl p-1 text-center w-10 bg-slate-100 rounded  ">
+            <i class="fa-regular fa-square-check text-sky-600"></i>
+          </div>
+          <h2 class="font-semibold text-xl my-2">Secure Payment</h2>
+          <p>Experience safe and secure transaction with our encrypted payment systems</p>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+  </section>
+
+
+
+
+
+
+  <section id="trending-section">
+    <div class=" mb-12 w-11/12 mx-auto">
+
+      <h2 class="text-2xl font-bold">Trending Now</h2>
+    </div>
+    <div class="flex gap-10 w-11/12 mx-auto" id="trending-container">
+
+    </div>
+  </section>
+
+
+
+
+
+  <section id="products-section" class="hidden ">
+
+    <div class="w-11/12 mx-auto my-10">
+      <h2 class="text-2xl font-bold mb-6 text-center justify-center">Our Products</h2>
+
+      <div id="category-container" class="flex gap-4 flex-wrap  text-center justify-center mb-10"></div>
+
+      <div id="products-container" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+    </div>
+
+  </section>
+
+
+
+
+  <!-- footer section -->
+
+
+  <section class="my-20 ">
+    <footer class="footer sm:footer-horizontal bg-slate-800 text-neutral-content p-10 ">
+      <nav>
+        <a class="btn btn-ghost text-xl font-bold text-primary">SwiftCart</a>
+        <p class="text-slate-500">Your one-stop shop for all your fashion <br>and lifestyle needs. Quality products,
+          fast <br> delivery, and excellent support.</p>
+      </nav>
+      <nav>
+        <h6 class="footer-title">QUICK LINKS</h6>
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">Products</a>
+        <a class="link link-hover">About</a>
+        <a class="link link-hover">Contact</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">SUPPORT</h6>
+        <a class="link link-hover">FAQ</a>
+        <a class="link link-hover">Shipping</a>
+        <a class="link link-hover">Returns</a>
+        <a class="link link-hover">Privacy Policy</a>
+      </nav>
+      <nav class="">
+        <h6 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h6>
+        <p>The laatest news, articles, and resources, <br>sent to your inbox weekly</p>
+
+        <div class="flex gap-3">
+          <label class="input validator">
+            <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+
+              </g>
+            </svg>
+            <input class="text-slate-500" type="email" placeholder="Enter your email" required />
+          </label>
+          <div class="validator-hint hidden text-slate-500">Enter valid email address</div>
+
+
+          <button class="btn bg-indigo-600 border-none text-white px-6">
+            Subscribe
+          </button>
+        </div>
+
+        <div>
+          <div>
+            <p>2025 SwiftCart, Inc, All right reserved.</p>
+          </div>
+          <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-regular fa-message"></i>
+          </div>
+        </div>
+
+      </nav>
+    </footer>
+  </section>
+
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
