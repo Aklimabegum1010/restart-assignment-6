@@ -30,10 +30,6 @@ document.getElementById("fullTitle").innerText = product.title
 
 
 
-
-
-
-
 const loadCategories = async () => {
     const res = await fetch("https://fakestoreapi.com/products/categories")
     const data = await res.json()
@@ -141,7 +137,7 @@ const displayAllProducts = (products) => {
                 <p class="font-bold">$ ${product.price}</p>
 
                 <div class="card-actions justify-between">
-                    <button class="btn btn-outline"><i class="fa-regular fa-eye"></i> Details</button>
+                    <button class="btn btn-outline" onclick="showDetails(${product.id})"><i class="fa-regular fa-eye"></i> Details</button>
                     <button class="btn btn-primary"><i class="fa-solid fa-cart-shopping"></i> Add</button>
                 </div>
             </div>
